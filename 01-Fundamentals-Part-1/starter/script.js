@@ -93,7 +93,7 @@ if (dolphinsAverage > koalasAverage && dolphinsAverage >= 100) {
 
 /*************************
  * Coding Challenge 4
- */
+
 
 // Part 1
 const bill = 275;
@@ -102,3 +102,4 @@ const tip = bill >= 50 && bill <= 300 ? .15 * bill : .20 * bill;
 
 // Part 2
 console.log(`The bill was ${bill}, the tip was ${tip}, and the total value was ${tip + bill}`);
+ */
