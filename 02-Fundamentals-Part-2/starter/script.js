@@ -47,11 +47,11 @@ checkWinner(dolphinsAverage,koalasAverage);
 
 /***********************
  * Coding Challenge 2
-*/
+
 
 // Part 1
 function calcTip(bill) {                    // Arrow Function w/ ternary operator more efficient
-    if (bill <= 300 && bill >= 50) {        // const calcTip = bill => bill <= 300 && bill >= 50 ? bill * .15 : bill * .2;
+    if (bill <= 300 && bill >= 50) {        // const calcTip = bill => bill <= 300 && bill >= 50 ? bill  //                                      // * .15 : bill * .2;
         const tip = bill * .15;
         return tip;
     } else {
@@ -73,3 +73,52 @@ console.log(tips);
 const total = [bills[0]+tips[0],bills[1]+tips[1],bills[2]+tips[2]];
 
 console.log(total);
+*/
+
+/***********************
+ * Coding Challenge 3
+ 
+
+const jon = {
+     fullName: 'Jon Smith',
+     mass: 92,
+     height: 1.95,
+     calcBMI: function () {
+        this.BMI = this.mass / (this.height * this.height);
+        return this.BMI;
+     }
+ };
+
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.BMI = this.mass / (this.height * this.height);
+        return this.BMI;
+    }
+};
+
+// Jon & Mark BMIs
+jon.calcBMI();
+mark.calcBMI();
+
+// Compare BMI and log results
+if (mark.BMI > jon.BMI) {
+    console.log(`${mark.fullName}'s BMI is higher than ${jon.fullName}'s BMI \n\ ${mark.BMI} \n\ ${jon.BMI}`);
+} else if (jon.BMI > mark.BMI) {
+    console.log(`${jon.fullName}'s BMI is higher than ${mark.fullName}'s \n\ ${jon.BMI} \n\ ${mark.BMI}`);
+} else {
+    console.log(`${jon.fullName} and ${mark.fullName} have the same BMI \n\ ${jon.BMI}`);
+}
+*/
+
+/***********************
+ * For loop lecture
+*/
+
+// for loop keeps running while condition is true
+
+for(let rep = 1; rep <= 10; rep++) {
+    console.log(`Lifting weights repetition ${rep}`);
+};
