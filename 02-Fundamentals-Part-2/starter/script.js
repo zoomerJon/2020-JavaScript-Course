@@ -115,10 +115,54 @@ if (mark.BMI > jon.BMI) {
 
 /***********************
  * For loop lecture
-*/
+
 
 // for loop keeps running while condition is true
 
 for(let rep = 1; rep <= 10; rep++) {
     console.log(`Lifting weights repetition ${rep}`);
 };
+
+/*******************************************
+ * Looping Arrays, Breaking and continuing
+*/
+
+const jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+let types = [];
+// console.log(jonasArray[4]);
+
+
+for(let i = 0; i < jonasArray.length; i++) {
+    console.log(jonasArray[i]);
+    types[i] = jonasArray[i];
+    // types.push(typeof jonasArray[i]);
+}
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for(let i = 0; i < years.length; i++) {
+    ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+// continue and break
+console.log('---Only Strings---')
+for (let i = 0; i < jonasArray.length; i++) {
+    if (typeof jonasArray[i] !== 'string') continue;
+    console.log(jonasArray[i], typeof jonasArray[i]);
+}
+
+console.log('---Break with Number---')
+for (let i = 0; i < jonasArray.length; i++) {
+    if (typeof jonasArray[i] === 'number') break;
+    console.log(jonasArray[i], typeof jonasArray[i]);
+}
