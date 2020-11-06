@@ -125,7 +125,7 @@ for(let rep = 1; rep <= 10; rep++) {
 
 /*******************************************
  * Looping Arrays, Breaking and continuing
-*/
+
 
 const jonasArray = [
     'Jonas',
@@ -165,4 +165,29 @@ console.log('---Break with Number---')
 for (let i = 0; i < jonasArray.length; i++) {
     if (typeof jonasArray[i] === 'number') break;
     console.log(jonasArray[i], typeof jonasArray[i]);
+}
+
+/*******************************************
+ * Looping Backwards and Loops in Loops
+*/
+
+const jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+
+for(let i = jonasArray.length - 1; i >= 0; i--) {
+    console.log(jonasArray[i]);
+}
+
+
+let exerciseType = ['pullup','pushup', 'squat']
+for(let i = 0; i < exerciseType.length; i++) {
+    for(let j = 1; j < 6; j++) {
+        console.log(`${exerciseType[i]} repetition ${j}`);
+    }
 }
