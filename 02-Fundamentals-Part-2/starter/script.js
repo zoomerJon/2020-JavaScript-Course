@@ -51,7 +51,7 @@ checkWinner(dolphinsAverage,koalasAverage);
 
 // Part 1
 function calcTip(bill) {                    // Arrow Function w/ ternary operator more efficient
-    if (bill <= 300 && bill >= 50) {        // const calcTip = bill => bill <= 300 && bill >= 50 ? bill  //                                      // * .15 : bill * .2;
+    if (bill <= 300 && bill >= 50) {        // const calcTip = bill => bill <= 300 && bill >= 50 ? bill * .15 : bill * .2;
         const tip = bill * .15;
         return tip;
     } else {
@@ -169,7 +169,7 @@ for (let i = 0; i < jonasArray.length; i++) {
 
 /*******************************************
  * Looping Backwards and Loops in Loops
-*/
+
 
 const jonasArray = [
     'Jonas',
@@ -191,3 +191,55 @@ for(let i = 0; i < exerciseType.length; i++) {
         console.log(`${exerciseType[i]} repetition ${j}`);
     }
 }
+
+/*******************************************
+ * The While Loop
+
+
+// for(let rep = 1; rep < 11; rep++) {
+//     console.log(`Exercise repetition ${rep}`);
+// }
+
+let rep = 1
+while(rep < 11){
+    // console.log(`WHILE: Exercise repetition ${rep}`);
+    rep++;
+}
+
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while(dice !== 6) {
+    console.log(`You rolled a ${dice}`);
+    dice = Math.trunc(Math.random() * 6) + 1;
+
+}
+
+/*******************************************
+ * Coding Challenge 4
+*/
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const calcTip = bill => bill <= 300 && bill >= 50 ? bill * .15 : bill * .20;
+
+let tips = [];
+let totals = [];
+
+for(let i = 0; i < bills.length; i++) {
+    tips.push(calcTip(bills[i]));
+    totals.push(bills[i] + tips[i]);
+}
+
+console.log(tips, totals)
+
+// Bonus
+function calcAverage(arr) {
+    let sum = 0;
+
+    for(let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+
+    return sum/(arr.length);
+}
+
+console.log(calcAverage(bills));
